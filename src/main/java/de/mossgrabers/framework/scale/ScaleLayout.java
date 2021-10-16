@@ -15,10 +15,10 @@ public enum ScaleLayout
     FOURTH_UP("4th ^"),
     /** To the right in fourth steps. */
     FOURTH_RIGHT("4th >"),
-    /** Upwards in third steps. */
-    THIRD_UP("3rd ^"),
-    /** To the right in third steps. */
-    THIRD_RIGHT("3rd >"),
+    /** Upwards in five steps. */
+    FIFTHS_UP("5th ^"),
+    /** To the right in five steps. */
+    FIFTHS_RIGHT("5th >"),
     /** Sequential up in fourth steps. */
     SEQUENT_UP("Seqent ^"),
     /** Sequential to the right in fourth steps. */

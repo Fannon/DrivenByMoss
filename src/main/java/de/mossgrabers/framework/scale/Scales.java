@@ -324,16 +324,20 @@ public class Scales
     public void setScaleLayout (final ScaleLayout scaleLayout)
     {
         this.scaleLayout = scaleLayout;
+        if (this.scaleLayout == null) {
+            this.scaleLayout = ScaleLayout.FOURTH_UP;
+        }
         this.orientation = this.scaleLayout.ordinal () % 2 == 0 ? Orientation.ORIENT_UP : Orientation.ORIENT_RIGHT;
+
         switch (this.scaleLayout)
         {
             case FOURTH_UP:
             case FOURTH_RIGHT:
                 this.setPlayShift (3);
                 break;
-            case THIRD_UP:
-            case THIRD_RIGHT:
-                this.setPlayShift (2);
+            case FIFTHS_UP:
+            case FIFTHS_RIGHT:
+                this.setPlayShift (4);
                 break;
             case SEQUENT_UP:
                 this.setPlayShift (this.numRows);
