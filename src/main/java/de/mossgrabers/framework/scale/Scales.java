@@ -96,7 +96,7 @@ public class Scales
 
     private Scale                       selectedScale            = Scale.MAJOR;
     private int                         scaleOffset              = 0;                                                                        // C
-    private ScaleLayout                 scaleLayout              = ScaleLayout.FOURTH_UP;
+    private ScaleLayout                 scaleLayout              = ScaleLayout.GRID_3;
     private Orientation                 orientation              = Orientation.ORIENT_UP;
     private boolean                     chromaticOn              = false;
     private int                         shift                    = 3;
@@ -323,33 +323,26 @@ public class Scales
      */
     public void setScaleLayout (final ScaleLayout scaleLayout)
     {
-        this.scaleLayout = scaleLayout;
-        if (this.scaleLayout == null) {
-            this.scaleLayout = ScaleLayout.FOURTH_UP;
+        if (scaleLayout != null) {
+            this.scaleLayout = scaleLayout;
         }
-        this.orientation = this.scaleLayout.ordinal () % 2 == 0 ? Orientation.ORIENT_UP : Orientation.ORIENT_RIGHT;
 
         switch (this.scaleLayout)
         {
-            case FOURTH_UP:
-            case FOURTH_RIGHT:
+            case GRID_3:
                 this.setPlayShift (3);
                 break;
-            case FIFTHS_UP:
-            case FIFTHS_RIGHT:
+            case GRID_4:
                 this.setPlayShift (4);
                 break;
-            case SEQUENT_UP:
-                this.setPlayShift (this.numRows);
+            case GRID_5:
+                this.setPlayShift (5);
                 break;
-            case SEQUENT_RIGHT:
-                this.setPlayShift (this.numColumns);
-                break;
-            case EIGHT_UP:
-            case EIGHT_RIGHT:
-            case EIGHT_UP_CENTER:
-            case EIGHT_RIGHT_CENTER:
+            case GRID_7:
                 this.setPlayShift (7);
+                break;
+            case GRID_SEQUENTIAL:
+                this.setPlayShift (this.numRows);
                 break;
         }
     }

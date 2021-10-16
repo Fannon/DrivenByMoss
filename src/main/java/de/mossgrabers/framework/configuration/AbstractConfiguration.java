@@ -945,7 +945,7 @@ public abstract class AbstractConfiguration implements Configuration
      */
     protected void activateScaleLayoutSetting (final ISettingsUI settingsUI)
     {
-        this.activateScaleLayoutSetting (settingsUI, ScaleLayout.FOURTH_UP.getName ());
+        this.activateScaleLayoutSetting (settingsUI, ScaleLayout.GRID_3.getName ());
     }
 
 

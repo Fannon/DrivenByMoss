@@ -55,7 +55,7 @@ public class MaschineConfiguration extends AbstractConfiguration
         this.activateScaleSetting (documentSettings);
         this.activateScaleBaseSetting (documentSettings);
         this.activateScaleInScaleSetting (documentSettings);
-        this.activateScaleLayoutSetting (documentSettings, ScaleLayout.SEQUENT_UP.getName ());
+        this.activateScaleLayoutSetting (documentSettings, ScaleLayout.GRID_SEQUENTIAL.getName ());
 
         ///////////////////////////
         // Note Repeat

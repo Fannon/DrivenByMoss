@@ -11,29 +11,17 @@ package de.mossgrabers.framework.scale;
  */
 public enum ScaleLayout
 {
-    /** Upwards in fourth steps. */
-    FOURTH_UP("4th ^"),
-    /** To the right in fourth steps. */
-    FOURTH_RIGHT("4th >"),
-    /** Upwards in five steps. */
-    FIFTHS_UP("5th ^"),
-    /** To the right in five steps. */
-    FIFTHS_RIGHT("5th >"),
-    /** Sequential up in fourth steps. */
-    SEQUENT_UP("Seqent ^"),
-    /** Sequential to the right in fourth steps. */
-    SEQUENT_RIGHT("Seqent >"),
+    /** Upwards in fourth steps -> 3 notes once it repeats. */
+    GRID_3("3 GRID"),
+    GRID_4("4 GRID"),
+    GRID_5("5 GRID"),
     /** Upwards in eighth steps. */
-    EIGHT_UP("8th ^"),
-    /** To the right in eighth steps. */
-    EIGHT_RIGHT("8th >"),
-    /** Eighth steps centered upwards. */
-    EIGHT_UP_CENTER("8th ^ centered"),
-    /** Eighth steps centered to the right. */
-    EIGHT_RIGHT_CENTER("8th > centered");
+    GRID_7("7 GRID ^"),
+    /** Sequential up */
+    GRID_SEQUENTIAL("SEQUENTIAL");
 
 
-    private static final String [] scaleLayoutNames = new String [10];
+    private static final String [] scaleLayoutNames = new String [5];
     static
     {
         final ScaleLayout [] values = ScaleLayout.values ();

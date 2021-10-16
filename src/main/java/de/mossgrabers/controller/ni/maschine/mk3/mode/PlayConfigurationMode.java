@@ -128,7 +128,7 @@ public class PlayConfigurationMode extends BaseMode
 
                 case 4:
                 case 5:
-                    scales.setScaleLayout (ScaleLayout.SEQUENT_UP);
+                    scales.setScaleLayout (ScaleLayout.GRID_SEQUENTIAL);
                     break;
 
                 case 6:
